@@ -1,0 +1,17 @@
+﻿#A60303 - primary
+
+#728C3B - brand-success
+
+#83BFAB - brand-info
+
+#F59A07 - brand-warning
+
+#8D0000 - brand-danger
+
+
+
+
+B1D4AC
+state-success #C9E59C
+state-info #BAE0D8/C4DED8
+state-warning #FCEFD8
