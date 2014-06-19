@@ -40,7 +40,7 @@
                         </button>
                         <a class="navbar-brand" href="#">
                             <div class="logo"><img src="img/logo.png"/></div>
-                            <span class="hidden-sm">Gebedshuis Amersfoort</span>
+                            <span>Gebedshuis Amersfoort</span>
                         </a>
                     </div>
                     <div class="navbar-collapse collapse">
@@ -72,52 +72,12 @@
         </div>
     </div>
 
-    <!-- CAROUSEL HEADER
+    <!-- CONTENT
    =================================-->
-    <div id="carousel-home" class="carousel slide" data-ride="carousel" data-interval="10000">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-home" data-slide-to="1"></li>
-            <li data-target="#carousel-home" data-slide-to="2"></li>
-            <li data-target="#carousel-home" data-slide-to="3"></li>
-        </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="img/waxine.jpg" alt="nacht">
-                <div class="carousel-caption">
-                    <p>Gebed in de nacht.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/piano.jpg" alt="bijbel">
-                <div class="carousel-caption">
-                    <h1>De bijbel bidden.</h1>
-                    <p>Gods Woord centraal in gebed en aanbidding.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Hoe en waarom &raquo;</a></p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/koppelpoort.jpg" alt="koppelpoort">
-                <div class="carousel-caption">
-                    <h1>Amersfoort.</h1>
-                    <p>Poort voor Nederland.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/olielampen.jpg" alt="olie">
-            </div>
-        </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-home" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-home" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
+    <div class="jumbotron text-center headerbackground">
+        <div class="container"></div>
     </div>
 
     <!-- /header container-->
@@ -128,7 +88,47 @@
 
         <div class="row">
             <div class="col-sm-8">
-                EMPTY SPACE
+                <div id="carousel-home" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="img/bijbel.jpg" alt="bijbel" style="margin-top: -130px">
+                            <div class="carousel-caption">
+                                <h1>De bijbel bidden.</h1>
+                                <p>Gods Woord centraal in gebed en aanbidding.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Hoe en waarom &raquo;</a></p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/koppelpoort.jpg" alt="koppelpoort" style="margin-top: -100px">
+                            <div class="carousel-caption">
+                                <h1>Amersfoort.</h1>
+                                <p>Poort voor Nederland.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/afoort_nacht.jpg" alt="nacht" style="margin-top: -130px">
+                            <div class="carousel-caption">
+                                <p>Gebed in de nacht.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-home" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-home" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
             </div>
 
             <div class="col-sm-4">
@@ -203,7 +203,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	(function(e,d,b){var a=0;var f=null;var c={x:0,y:0};e("[data-toggle]").closest("li").on("mouseenter",function(g){if(f){f.removeClass("open")}d.clearTimeout(a);f=e(this);a=d.setTimeout(function(){f.addClass("open")},b)}).on("mousemove",function(g){if(Math.abs(c.x-g.ScreenX)>4||Math.abs(c.y-g.ScreenY)>4){c.x=g.ScreenX;c.y=g.ScreenY;return}if(f.hasClass("open")){return}d.clearTimeout(a);a=d.setTimeout(function(){f.addClass("open")},b)}).on("mouseleave",function(g){d.clearTimeout(a);f=e(this);a=d.setTimeout(function(){f.removeClass("open")},b)})})(jQuery,window,10);
