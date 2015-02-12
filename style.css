@@ -1,45 +1,44 @@
+/*
+ Theme Name:     Bootstrap GA
+ Theme URI:      http://example.com/twenty-fourteen-child/
+ Description:    Responsive Child Theme voor stichting GA
+ Template:       wordpress-bootstrap-master
+ Version:        1.0.0
+*/
+
+@import url("css/bootstrap.min.css");
+
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-    overflow: -moz-scrollbars-vertical;
-    overflow-y: scroll;
-}
-html,
-body {
-    height: 100%;
-}
-
-/* Wrapper for page content to push down footer */
-#wrap {
+    position: relative;
     min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    /* Negative indent footer by its height */
-    margin: 0 auto -200px;
-    /* Pad bottom by footer height */
-    padding: 0 0 280px;
+}
+body {
+    padding-bottom: 20px;
+    margin-bottom: 205px;
 }
 
 /* Set the fixed height of the footer here */
 #footer {
-    height: 200px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    min-height: 200px;
     border-top: 5px solid #a60303;
+    margin-top: 20px;
     background-color: #eee;
 }
 
-#footer .container {
-    padding: 0 15px;
+body > .container {
+    margin-bottom: 30px;
 }
 
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-    #footer {
-        margin-left: -20px;
-        margin-right: -20px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+#footer .container {
+    padding: 0 15px 20px 15px;
 }
 
 .navbar-wrapper {
@@ -59,7 +58,7 @@ body {
     margin-right: 7px;
 }
 .navbar-header img {
-    width: 43px;
+    width: 36px;
 }
 .navbar-header a.navbar-brand {
     color: #a60303;
@@ -70,6 +69,11 @@ body {
 .navbar{
     border-bottom:1px solid #ccc;
     border-top: 2px solid #a60303;
+}
+@media (max-width: 400px) {
+    .navbar-header a.navbar-brand .brand-text {
+        display: none;
+    }
 }
 
 
@@ -87,15 +91,42 @@ body {
     background-size: 100% auto;
 }
 
+/*
+ *grid fixes
+ */
+.row .blog-main .row{
+    margin-right: 0;
+    margin-left: 0;
+}
+.row .blog-main .row div {
+    padding: 0;
+}
+
+
+
+.row .blog-main .row.paragraph-spacing {
+    margin-top: 30px;
+}
+.row .blog-main .row.paragraph-spacing .col-sm-9 {
+    padding: 0 15px 0 0;
+}
+.row .blog-main .row.paragraph-spacing .col-sm-9.col-sm-push-3 {
+    padding: 0 0 0 15px;
+}
+
+
+p.indend-from-second {
+    text-indent: -0.8em;
+    padding-left: 0.8em;
+}
+
 .page-content-header {
-    padding-bottom: 20px;
     margin: 20px 0 20px;
 }
 
 .page-content-title {
     margin-top: 30px;
     margin-bottom: 0;
-    font-size: 60px;
     font-weight: normal;
 }
 
@@ -109,8 +140,8 @@ body {
     margin: 0 auto;
 }
 #carousel-home {
-	height: 400px;
-    margin-bottom: 50px;
+    height: 400px;
+    margin-bottom: 30px;
 }
 #carousel-home div.item {
     overflow: hidden;
@@ -142,49 +173,63 @@ body {
     }
 }
 
-/*
-.container.home {
-	padding-bottom: 90px;
+/* Responsive iFrame */
+@media (max-width:992px) {
+    .responsive-iframe-container.big-container {
+        display: none;
+    }
 }
-.container {
-	padding: 0;
+@media (min-width:992px) {
+    .responsive-iframe-container.small-container {
+        display: none;
+    }
 }
-.home .carousel .item {
-	height: 400px;
-	overflow: hidden;
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
-.home.topempty .carousel .item {
-	height: 350px;
-	overflow: hidden;
-}
-.carousel .item .contrast {
-	display: inline-block;
-}
-*/
-
-/* Sticky footer styles
--------------------------------------------------- */
-/*
-html {
-	position: relative;
-	min-height: 100%;
-}
-body {
-	// Margin bottom by footer height
-	margin-bottom: 280px;
+.responsive-iframe-container iframe,
+.responsive-iframe-container object,
+.responsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-#footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 280px;
+/* Value page */
+.container .blog-main.values .value {
+    margin-bottom: 25px;
+}
+.container .blog-main.values .value.last {
+    margin-bottom: 0px;
+}
+.container .blog-main.values .value a.collapseControl:hover,
+.container .blog-main.values .value a.collapseControl:focus {
+    text-decoration: none;
+}
+p.bibleref {
+    font-style: italic;
 }
 
-#footer .container{
-	height: 100%;
-	border-top: 5px solid #a60303;
-	background-color: #eee;
-	padding: 0 15px;
+@media (min-width:500px) {
+    .container .blog-main.values .value img {
+        width: 200px;
+    }
+    .container .blog-main.values .value img.alignright {
+        margin: 0 0 20px 20px;
+    }
+    .container .blog-main.values .value img.alignleft {
+        margin: 0 20px 20px 0;
+    }
 }
-*/
+@media (max-width:500px) {
+    .container .blog-main.values .value img {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
